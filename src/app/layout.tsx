@@ -38,6 +38,13 @@ export const metadata: Metadata = {
     title: "Pure Essence School | Purity, Piety, and Purpose",
     description: "Purity, Piety, and Purpose — Nurturing the next generation of faithful leaders.",
   },
+  icons: {
+    icon: [
+      { url: "/icon.png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
