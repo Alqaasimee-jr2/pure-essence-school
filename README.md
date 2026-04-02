@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌙 Pure Essence School — Official Website
 
-## Getting Started
+[![Framework: Next.js 14](https://img.shields.io/badge/Framework-Next.js%2014-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Styling: Tailwind CSS v4](https://img.shields.io/badge/Styling-Tailwind%20CSS%20v4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Animations: Framer Motion](https://img.shields.io/badge/Animations-Framer%20Motion-FF0055?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+[![Deployment: Vercel](https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
-First, run the development server:
+A premium, interactive, and high-performance digital sanctuary for **Pure Essence School**, Ibogun, Ogun State, Nigeria. Built with a focus on **Purity, Piety, and Purpose**, this platform blends traditional Islamic aesthetics with cutting-edge web technology.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Premium Features
+
+- **High-End Design**: Custom "unnatural" organic curves, glassmorphism UI, and a sophisticated Deep Maroon & Gold palette.
+- **Chibi Branding**: Unique, featureless chibi-themed illustrations that maintain modest Islamic identity while staying visually engaging.
+- **Interactive Forms**: Fully functional Admissions and Careers forms with dual-submission logic (direct **WhatsApp** deep-links + Email fallback).
+- **SEO Optimized**: Advanced per-page metadata, OpenGraph cards, JSON-LD LocalBusiness structured data, and dynamic XML sitemaps.
+- **Responsive & Accessible**: Pixel-perfect layout across mobile, tablet, and desktop, optimized for the Nigerian mobile-first market.
+- **Performance**: Static-first generation with Next.js 14, achieving near-instant load times and buttery smooth Framer Motion transitions.
+
+## 🛠️ Technical Stack
+
+- **Core**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4 (Alpha/Edge features)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React & Custom SVG Calligraphy
+- **Metadata**: Next.js Metadata API with localized Nigerian school SEO
+
+## 📂 Project Structure
+
+```text
+src/
+├── app/               # Next.js App Router (Pages & Layout)
+├── components/        # UI Components & Layout elements
+│   ├── ui/            # Reusable primitive components (AnimatedSections, Cards)
+│   ├── forms/         # Interactive student & career forms
+│   └── layout/        # Navbar, Footer, Mobile Navigation
+├── lib/               # Shared logic & Brand constants (Contact info, Pricing)
+└── public/            # Static assets (Logos, Chibi images, Patterns)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Clone the Repo**:
+    ```bash
+    git clone https://github.com/your-repo/pure-essence-school.git
+    cd pure-essence-school
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Learn More
+3.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+4.  **Build for Production**:
+    ```bash
+    npm run build
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 Legal & Physical Payments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This platform is configured for **Physical Payments Only**. No online payment gateways are integrated. All financial transactions are handled at the School Registry in Ibogun, Ogun State, as per the school's policy.
 
-## Deploy on Vercel
+## 🌙 مدرسة الجوهر النقي
+> "Nurturing the next generation of faithful leaders through Purity, Piety, and Purpose."
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Built with ❤️ for Pure Essence School.
