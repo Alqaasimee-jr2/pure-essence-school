@@ -3,6 +3,7 @@ import { Noto_Serif, Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
@@ -79,6 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${notoSerif.variable} ${manrope.variable} bg-[#faf9f8] text-[#1a1c1c] font-body antialiased overflow-x-hidden`}>
+        <ScrollToTop />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

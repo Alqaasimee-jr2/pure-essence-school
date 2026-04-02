@@ -121,11 +121,6 @@
   animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
-/* Smooth scrollbar */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Focus ring */
 :focus-visible {
   outline: 2px solid #ad2c00;
