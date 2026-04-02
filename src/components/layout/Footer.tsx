@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   SCHOOL_NAME_AR,
   SCHOOL_TAGLINE,
@@ -30,9 +31,19 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-1 space-y-5">
-            <div>
-              <div className="text-2xl font-headline text-white font-bold">{SCHOOL_NAME_AR}</div>
-              <div className="text-xs uppercase tracking-[0.25em] text-orange-400/80 mt-1">Pure Essence School</div>
+            <div className="flex items-center gap-4">
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                <Image
+                  src="/icon.png"
+                  alt="Pure Essence School"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <div className="text-2xl font-headline text-white font-bold">{SCHOOL_NAME_AR}</div>
+                <div className="text-[10px] uppercase tracking-[0.25em] text-orange-400 mt-1">Pure Essence School</div>
+              </div>
             </div>
             <p className="text-sm text-stone-400 leading-relaxed max-w-xs">
               A sanctuary for intellectual and spiritual growth. Nurturing the pure essence of every child through {SCHOOL_TAGLINE}.

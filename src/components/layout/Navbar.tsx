@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import NextImage from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS, SCHOOL_NAME_AR } from "@/lib/constants";
@@ -31,13 +32,23 @@ export default function Navbar() {
     >
       <nav className="max-w-screen-2xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col group">
-          <span className="text-xl font-headline font-bold text-[#570000] leading-tight group-hover:text-[#ad2c00] transition-colors duration-300">
-            {SCHOOL_NAME_AR}
-          </span>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#5a413d]/70 font-body">
-            Pure Essence School
-          </span>
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 lg:w-12 lg:h-12 overflow-hidden rounded-xl border border-[#e2bfb9]/30 shadow-sm group-hover:scale-105 transition-transform duration-300">
+            <NextImage
+              src="/icon.png"
+              alt="Pure Essence School Emblem"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-xl lg:text-2xl font-headline font-bold text-[#570000] leading-none group-hover:text-[#ad2c00] transition-colors duration-300">
+              {SCHOOL_NAME_AR}
+            </span>
+            <span className="text-[9px] lg:text-[10px] uppercase tracking-[0.25em] text-[#5a413d]/70 font-body mt-1">
+              Pure Essence School
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
