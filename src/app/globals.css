@@ -1,26 +1,149 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #570000;
+  --color-primary-container: #800000;
+  --color-secondary: #ad2c00;
+  --color-secondary-container: #d83900;
+  --color-tertiary: #705d00;
+  --color-tertiary-container: #c9a900;
+  --color-background: #faf9f8;
+  --color-surface: #faf9f8;
+  --color-surface-container: #eeeeed;
+  --color-surface-container-low: #f4f3f2;
+  --color-surface-container-high: #e9e8e7;
+  --color-surface-container-highest: #e3e2e1;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-tertiary: #ffffff;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #5a413d;
+  --color-outline-variant: #e2bfb9;
+  --color-primary-fixed: #ffdad4;
+  --color-primary-fixed-dim: #ffb4a8;
+  --color-on-primary-container: #ff8371;
+  --color-gold: #c9a900;
+
+  --font-headline: var(--font-headline), "Noto Serif", serif;
+  --font-body: var(--font-body), "Manrope", sans-serif;
+
+  --radius-DEFAULT: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Organic curve utilities */
+.curve-organic-1 { border-radius: 6rem 2rem 8rem 3rem; }
+.curve-organic-2 { border-radius: 4rem 12rem 3rem 9rem; }
+.curve-organic-3 { border-radius: 9rem 4rem 8rem 5rem; }
+.curve-organic-4 { border-radius: 3rem 8rem 4rem 10rem; }
+.curve-blob { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+.curve-asymmetric { border-radius: 2rem 0.5rem 2rem 0.5rem; }
+.curve-pill-alt { border-radius: 3rem 0.5rem 3rem 0.5rem; }
+
+/* Section wave separators */
+.wave-top {
+  border-radius: 100% 0% 100% 0% / 15% 0% 15% 0%;
+}
+.wave-bottom {
+  border-radius: 0% 100% 0% 100% / 0% 15% 0% 15%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.glass-dark {
+  background: rgba(87, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Arabic watermark */
+.arabic-watermark {
+  font-family: var(--font-headline);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(87, 0, 0, 0.06);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Scrolling marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 24s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Count-up shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #570000 25%, #ad2c00 50%, #570000 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button press effect */
+.btn-press:active {
+  transform: scale(0.96);
+}
+
+/* Pulse dot for admission open */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* Smooth scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #ad2c00;
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: #ffdad4;
+  color: #570000;
+}
+
+/* Form input base */
+.form-input-base {
+  @apply w-full px-5 py-4 rounded-2xl bg-[#f4f3f2] border border-transparent focus:border-[#ad2c00] focus:ring-2 focus:ring-[#ad2c00]/20 focus:outline-none transition-all duration-200 font-body text-[#1a1c1c] placeholder:text-[#5a413d]/50;
+}
+
+/* Section padding */
+.section-pad {
+  @apply py-24 px-6 lg:px-16;
 }
